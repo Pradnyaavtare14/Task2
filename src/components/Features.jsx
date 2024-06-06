@@ -5,16 +5,19 @@ import rectangle from '../assets/images/rectangle.png'
 const Features = () => {
   return (
     <div>
-      <div className='flex flex-col justify-center items-center ml-32 mt-24'>
+      <div className='flex flex-col justify-center items-center ml-8 sm:ml-32 mt-24'>
         <h1 className='text-3xl font-semibold mb-7'>Featured Jobs</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, ad est iure labore nobis <br />ex consequuntur reiciendis iste dolores consectetur. Nam in illo eaque magni fugit explicabo quae esse!</p>
+        <p className='text-center mx-4'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, ad est iure labore nobis
+          <br className="hidden sm:block" />
+          ex consequuntur reiciendis iste dolores consectetur. Nam in illo eaque magni fugit explicabo quae esse!
+        </p>
       </div>
       {/* next column */}
-      <div className="flex justify-center items-center text-center space-x-8 mt-12">
-
+      <div className="flex flex-wrap justify-center items-center text-center space-x-0 sm:space-x-8 mt-12">
         {/* Flex box template */}
         {["Database Programmer", "UI/UX Designer", "Content Writer", "Database Programmer"].map((title, index) => (
-          <div key={index} className="flex flex-col items-center shadow-lg h-80 w-64 p-4 mb-5">
+          <div key={index} className="flex flex-col items-center shadow-lg h-80 w-64 p-4 mb-5 mx-2">
             {/* Circle */}
             <div className="h-10 w-10 bg-gray-400 flex justify-center items-center text-center rounded-full mb-4">
               {/* You can add text or an icon inside the circle if needed */}
@@ -26,7 +29,7 @@ const Features = () => {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             {/* Amount */}
-            <p className="text-md  mb-4">$14,000-$25,000   /monthly</p>
+            <p className="text-md mb-4">$14,000-$25,000 /monthly</p>
             {/* Location */}
             <p className="text-sm text-gray-600 mb-4">London, England</p>
             {/* Heart and button */}
@@ -42,21 +45,19 @@ const Features = () => {
             </div>
           </div>
         ))}
-
       </div>
       <div>
-        <div className='flex flex-col justify-center items-center ml-32 mt-24'>
+        <div className='flex flex-col justify-center items-center ml-8 sm:ml-32 mt-24'>
           <h1 className='text-3xl font-semibold mb-7'>What Our Customer Says</h1>
-          <p className="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, ad est iure labore nobis <br />ex consequuntur reiciendis iste dolores consectetur. Nam in illo eaque magni fugit explicabo quae esse!</p>
+          <p className="text-xs text-center mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, ad est iure labore nobis <br className="hidden sm:block" />ex consequuntur reiciendis iste dolores consectetur. Nam in illo eaque magni fugit explicabo quae esse!</p>
         </div>
         <div className="container mx-auto p-6 mt-16">
-          <div className="flex ">
-
-            <div className="w-1/4 flex justify-center items-center">
+          <div className="flex flex-wrap">
+            <div className="w-full sm:w-1/4 flex justify-center items-center">
               <img src={customer} alt="Profile" className=" h-60 w-72" />
             </div>
             {/* Second flex box (Details) */}
-            <div className="w-3/4 flex flex-col justify-between">
+            <div className="w-full sm:w-3/4 flex flex-col justify-between mt-4 sm:mt-0">
               {/* Name and post */}
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -84,7 +85,7 @@ const Features = () => {
                       <path d="M11 17l-5-5m0 0l5-5m-5 5h12" />
                     </svg>
                   </button>
-                  <button className="h-8 w-8  rounded-full flex justify-center items-center" style={{ backgroundColor: "#5f4bdb" }}>
+                  <button className="h-8 w-8 rounded-full flex justify-center items-center" style={{ backgroundColor: "#5f4bdb" }}>
                     <svg className="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 17l5-5m0 0l-5-5m5 5H2" />
                     </svg>
@@ -96,122 +97,69 @@ const Features = () => {
         </div>
       </div>
 
-      <div className="h-48 ml-28 mr-28 mt-20 rounded-lg mb-10 bg-gray-200 flex justify-center items-center overflow-hidden">
+      <div className="h-48 ml-8 sm:ml-28 mr-8 sm:mr-28 mt-20 rounded-lg mb-10 bg-gray-200 flex justify-center items-center overflow-hidden">
         <img src={rectangle} alt="Sample" className="h-full w-full object-cover" />
       </div>
-      <div className='flex flex-col justify-center items-center ml-32 mt-24'>
+      <div className='flex flex-col justify-center items-center ml-8 sm:ml-32 mt-24'>
         <h1 className='text-3xl font-semibold mb-7'>Pricing Plan</h1>
-        <p className="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, ad est iure labore nobis <br />ex consequuntur reiciendis iste dolores consectetur. Nam in illo eaque magni fugit explicabo quae esse!</p>
+        <p className="text-xs text-center mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, ad est iure labore nobis <br className="hidden sm:block" />ex consequuntur reiciendis iste dolores consectetur. Nam in illo eaque magni fugit explicabo quae esse!</p>
       </div>
-      <div className="flex  justify-center items-center text-center mt-7 mb-10">
-        <div className="bg-white-800 h-80 w-60 mx-2 relative shadow-xl">
-          <div className=" text-black  text-xs p-2">
-            <h1 className="text-2xl font-semibold mt-4">  Free <br /> </h1>
-
-            <h1 className="text-3xl font-bold mt-6"> $ 0 </h1>
-            <p className="mt-4">per month</p>
-            <div >
+      <div className="flex flex-wrap justify-center items-center text-center mt-7 mb-10">
+        {[
+          { plan: "Free", price: "$ 0", details: ["Lorem, ipsum dolor consectetur.", "Lorem ipsum dolor sit.", "Lorem, ipsum dolor adipisicing elit."] },
+          { plan: "Premium", price: "$ 175", details: ["Lorem, ipsum dolor consectetur.", "Lorem ipsum dolor sit.", "Lorem, ipsum dolor adipisicing elit."] },
+          { plan: "Platinum", price: "$ 500", details: ["Lorem, ipsum dolor consectetur.", "Lorem ipsum dolor sit.", "Lorem, ipsum dolor adipisicing elit."] },
+        ].map((item, index) => (
+          <div key={index} className="bg-white-800 h-80 w-60 mx-2 relative shadow-xl mb-5 sm:mb-0">
+            <div className="text-black text-xs p-2">
+              <h1 className="text-2xl font-semibold mt-4">{item.plan}</h1>
+              <h1 className="text-3xl font-bold mt-6">{item.price}</h1>
+              <p className="mt-4">per month</p>
               <ul className="mt-7 space-y-2">
-                {["Lorem, ipsum dolor consectetur.", "Lorem ipsum dolor sit.", "Lorem, ipsum dolor adipisicing elit."].map((item, index) => (
-                  <li key={index} className="flex items-center">
+                {item.details.map((detail, idx) => (
+                  <li key={idx} className="flex items-center">
                     <span className="h-2 w-2 bg-black rounded-full mr-2"></span>
-                    {item}
+                    {detail}
                   </li>
                 ))}
               </ul>
+              <button className="py-1 px-3 text-white rounded mt-7" style={{ backgroundColor: index === 1 ? "#5f4bdb" : "#cdc7f6", color: index === 1 ? "white" : "#5f4bdb" }}>Learn more</button>
             </div>
-            <button className="py-1 px-3 text-white rounded mt-7" style={{ color: "#5f4bdb", backgroundColor: "#cdc7f6" }}>Learn more</button>
-
           </div>
-        </div>
-        <div className="bg-white-800 h-80 w-60 mx-2 relative shadow-xl">
-          <div className=" text-black  text-xs p-2">
-            <h1 className="text-2xl font-semibold mt-4">  Premium <br /> </h1>
-
-            <h1 className="text-3xl font-bold mt-6"> $ 175 </h1>
-            <p className="mt-4">per month</p>
-            <div >
-              <ul className="mt-7 space-y-2">
-                {["Lorem, ipsum dolor consectetur.", "Lorem ipsum dolor sit.", "Lorem, ipsum dolor adipisicing elit."].map((item, index) => (
-                  <li key={index} className="flex items-center">
-                    <span className="h-2 w-2 bg-black rounded-full mr-2"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <button className="py-1 px-3 text-white rounded mt-7" style={{ backgroundColor: "#5f4bdb" }}>Learn more</button>
-
-          </div>
-        </div>
-        <div className="bg-white-800 h-80 w-60 mx-2 relative shadow-xl">
-          <div className=" text-black  text-xs p-2">
-            <h1 className="text-2xl font-semibold mt-4"> Platinum <br /> </h1>
-
-            <h1 className="text-3xl font-bold mt-6"> $ 500 </h1>
-            <p className="mt-4">per month</p>
-            <div >
-              <ul className="mt-7 space-y-2">
-                {["Lorem, ipsum dolor consectetur.", "Lorem ipsum dolor sit.", "Lorem, ipsum dolor adipisicing elit."].map((item, index) => (
-                  <li key={index} className="flex items-center">
-                    <span className="h-2 w-2 bg-black rounded-full mr-2"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <button className="py-1 px-3 text-white rounded mt-7" style={{ color: "#5f4bdb", backgroundColor: "#cdc7f6" }}>Learn more</button>
-
-          </div>
-        </div>
-
-
+        ))}
       </div>
 
-      <div className='flex flex-col  ml-32 mt-24'>
+      <div className='flex flex-col ml-8 sm:ml-32 mt-24'>
         <h1 className='text-3xl font-semibold mb-7'>Latest News</h1>
-        <p className="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, ad est iure labore nobis <br />ex consequuntur reiciendis iste dolores consectetur. Nam in illo eaque magni fugit explicabo quae esse!</p>
+        <p className="text-xs text-center mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, ad est iure labore nobis <br className="hidden sm:block" />ex consequuntur reiciendis iste dolores consectetur. Nam in illo eaque magni fugit explicabo quae esse!</p>
       </div>
 
       <div className="relative container mx-auto p-6 mt-16">
-      <div className="flex space-x-6 ">
-        {/* Smaller flex box */}
-        <div className="w-1/4 h-64 bg-gray-100 flex justify-center items-center ml-60 rounded-xl">
-          
-          <div className="absolute bottom-10 left-80">
-          <h1 className="text-md font-bold">
-              A media Critic Focuses on <br />
-              the Crisis in local news
-            </h1>
-        <p className="text-xs">Lorem ipsum dolor sit.</p>
-        <button className="absolute bottom-44 left-48 py-2 px-4 bg-orange-500 text-white rounded">
-      Peoples
-      </button>
-      </div>
-        </div>
-        {/* Larger flex box */}
-        <div className=" w-2/5 h-64 bg-gray-100 flex justify-center items-center rounded-xl ">
-          
-          <div  className="absolute bottom-10 mr-96">
-            <h1 className="text-md font-bold">
-              A media Critic Focuses on <br />
-              the Crisis in local news
-            </h1>
-            <p className="text-xs">
-              Lorem ipsum dolor sit.
-              
-            </p>
+        <div className="flex flex-wrap space-x-0 sm:space-x-6">
+          {/* Smaller flex box */}
+          <div className="w-full sm:w-1/4 h-64 bg-gray-100 flex justify-center items-center ml-0 sm:ml-60 rounded-xl mb-4 sm:mb-0">
+            <div className="absolute bottom-10 left-0 sm:left-80">
+              <h1 className="text-md font-bold">
+                A media Critic Focuses on <br />
+                the Crisis in local news
+              </h1>
+              <p className="text-xs">Lorem ipsum dolor sit.</p>
+              <button className="absolute bottom-44 left-16 sm:left-48 py-2 px-4 bg-orange-500 text-white rounded">Peoples</button>
+            </div>
           </div>
-          <button className="absolute top-12 right-72 py-2 px-4 bg-orange-500 text-white rounded">
-        Technology
-      </button>
+          {/* Larger flex box */}
+          <div className="w-full sm:w-2/5 h-64 bg-gray-100 flex justify-center items-center rounded-xl">
+            <div className="absolute bottom-10 left-0 sm:left-auto mr-0 sm:mr-96">
+              <h1 className="text-md font-bold">
+                A media Critic Focuses on <br />
+                the Crisis in local news
+              </h1>
+              <p className="text-xs">Lorem ipsum dolor sit.</p>
+            </div>
+            <button className="absolute top-12 right-16 sm:right-72 py-2 px-4 bg-orange-500 text-white rounded">Technology</button>
+          </div>
         </div>
       </div>
-      {/* Button in the top right corner */}
-      
-      {/* Text in the bottom left corner */}
-      
-    </div>
     </div>
   )
 }
