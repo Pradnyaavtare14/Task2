@@ -3,17 +3,21 @@
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white py-10">
-            <div className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-0">
-                <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 lg:mb-0 lg:ml-8 text-center lg:text-left">
-                    Dont miss our weekly updates <br className="hidden lg:block" /> about freelancer career
-                </p>
-                <div className="flex items-center">
-                    <input type="text" placeholder="Enter your email address..." className="px-3 py-2 bg-gray-800 rounded mr-2 w-64 sm:w-auto" />
-                    <button className="px-4 py-2 bg-orange-500 text-white rounded">SUBSCRIBE</button>
+            <div className="container mx-auto px-4 lg:px-0">
+                <div className="flex flex-col lg:flex-row items-center justify-between">
+                    <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 lg:mb-0 text-center lg:text-left">
+                        Dont miss our weekly updates <br className="hidden lg:block" /> about freelancer career
+                    </p>
+                    <div className="flex items-center  ml-0 lg:ml-8">
+                        <input 
+                            type="text" 
+                            placeholder="Enter your email address..." 
+                            className="px-3 py-2 bg-gray-800 rounded mr-2 w-64 sm:w-auto" 
+                        />
+                        <button className="px-4 py-2 bg-orange-500 text-white rounded">SUBSCRIBE</button>
+                    </div>
                 </div>
-            </div>
-            <div className="container mx-auto px-4 mt-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                     <div>
                         <h2 className="text-2xl font-bold mb-4">Ziro</h2>
                         <p className="text-gray-400 mb-4">
@@ -63,7 +67,6 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                {/* Copyright */}
                 <div className="mt-8 border-t border-gray-700 pt-8">
                     <div className="flex flex-col lg:flex-row justify-between items-center">
                         <p className="text-gray-400 text-center lg:text-left">Ziro Freelancer Landing Website © 2020 All Rights Reserved</p>
